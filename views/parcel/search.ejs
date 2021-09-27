@@ -1,0 +1,44 @@
+<form action="/parcel/search" method="GET">
+    
+    <br>
+
+    <div>
+        <label for="username"> Username</label>
+        <input type="text"  name="username"  value = "<%= searchOptions.username%>" >
+    </div>
+    
+    <br>
+
+    <div>
+        <button type="submit" target="blank">search parcel</button>
+    </div>
+</form>
+
+<a href="../routes/login"> GO TO LOGIN </a>
+
+
+<br>
+
+<% parcels.forEach(parcel => { %>
+    <br>
+    <div>username: <%= parcel.username%></div>
+    <div>Firstname: <%= parcel.Firstname%></div>
+    <div>Description: <%= parcel.Description%></div>
+    <div>Destination: <%= parcel.destination%></div>
+    <div>location: <%= parcel.location%></div>
+    <div>status: <%= parcel.status%></div>
+    
+    <a href = "/parcel/search/<%= parcel.id %>"> view </a> <br>
+    <a href = "/parcel/search/<%= parcel.id %>/edit"> Edit destination </a>
+
+    <form action="/parcel/search/<%= parcel.id %>?_method=DELETE" method="POST" >
+
+        <button type="submit"> Delete </button>
+
+    </form>
+        
+    <br>
+<% }) %>
+
+
+

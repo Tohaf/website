@@ -1,0 +1,44 @@
+Register
+
+<form action="/Register" method="POST">
+
+    <div>
+        <label for="Firstname"> Firstname</label>
+        <input type="text" id="Firstname" name="Firstname" required value="<%= register.Firstname%>">
+    </div>
+
+    <br>
+
+    <div>
+        <label for="Lastname"> Lastname</label>
+        <input type="text" id="Lastnmae" name="Lastname" required value="<%= register.Lastname%>">
+    </div>
+
+    <br>
+
+    <div>
+        <label for="username"> Username</label>
+        <input type="text" id="username" name="username"  required value="<%= register.username%>" >
+    </div>
+
+    <br>
+
+    <div>
+        <label for="password"> password</label>
+        <input type="text" id="password" name="password" required value="<%= register.password%>">
+    </div>
+
+    <br>
+
+    <div>
+        <label for="email"> email</label>
+        <input type="email" id="email" name="email" required value="<%= register.email%>">
+    </div>
+    <br>
+
+    <div>
+        <button type="submit" target="blank">signup</button>
+    </div>
+</form>
+
+<a href="login"> GO TO LOGIN </a>

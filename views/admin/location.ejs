@@ -1,0 +1,41 @@
+<form class="back" action="/admin/location" method="GET">
+    
+    <br>
+
+    <div>
+        <label for="location"> Location </label>
+        <input type="text"  name="location" value= "<%= searchOptions.location %>" >
+    </div>
+    
+    <br>
+
+    <div>
+        <button type="submit" target="blank"> search location </button>
+    </div>
+</form>
+
+<a href="../routes/login"> GO TO LOGIN </a>
+
+
+<br>
+
+<% parcels.forEach(parcel => { %>
+    <br>
+    <div> username: <%= parcel.username%></div>
+    <div>Firstname: <%= parcel.Firstname%></div>
+    <div>Description: <%= parcel.Description%></div>
+    <div>Destination: <%= parcel.destination%></div>
+    <div>Location: <%= parcel.location%></div>
+    <div>Status: <%= parcel.status%></div>
+    
+    <a href = "/admin/location/<%= parcel.id%>"> Edit location </a> <br>
+    <br>
+    <a href = "/admin/status/<%= parcel.id%>"> Edit Status </a>
+
+
+        
+    <br>
+<% }) %>
+
+
+

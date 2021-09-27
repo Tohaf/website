@@ -1,0 +1,56 @@
+create a parcel
+
+<form action="/parcel" method="POST">
+
+    <div>
+        <label for="Firstname"> Firstname</label>
+        <input type="text" id="Firstname" name="Firstname" required >
+    </div>
+
+    <br>
+
+    <br>
+
+    <div>
+        <label for="username"> Username</label>
+        <input type="text" id="username" name="username"  required value="<%= parcel.username%>" >
+    </div>
+
+    <br>
+
+    <div>
+        <label for="Description"> Description</label>
+        <input type="text" id="Description" name="Description" required value="<%= parcel.Description %>">
+    </div>
+
+    <br>
+    <div>
+        <label for="destination"> Destination</label>
+        <input type="text" id="destination" name="destination"  required value="<%= parcel.destination%>" >
+    </div>
+
+    <br>
+
+    <div>
+        <label for="location"> Location </label>
+        <input type="text" id="location" name="location"  required value="<%= parcel.location%>" >
+    </div>
+
+    
+    <br>
+
+    <div>
+        <label for="status"> Status </label>
+        <input type="text" id="status" name="status"  required value="<%= parcel.status%>" >
+    </div>
+
+    <div>
+        <button type="submit" target="blank">create parcel</button>
+    </div>
+</form>
+
+<br>
+<a href="login"> GO TO LOGIN </a>
+
+<br>
+<a href="parcel/search"> view orders placed </a>
