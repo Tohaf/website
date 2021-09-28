@@ -135,32 +135,6 @@ router.delete('/search/:id', async(req, res)=> {
 
 
 
-/*
-router.post('/', async(req, res)=> {
-    var Firstname = req.body.Firstname;
-    var username = req.body.username;
-    var Description = req.body.Description;
-
-    var newParcel = new parcel();
-
-    newParcel.Firstname = Firstname;
-    newParcel.Description = Description;
-    newParcel.username = username;
-
-    newParcel.save((err, saveParcel)=>{
-        if(err){
-            console.log(err);
-            res.status(500).send();
-        }
-
-        res.send('parcel succesfully created');
-    });
-
-});
-
-*/
-
-
 
 
 

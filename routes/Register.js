@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
 
     newRegister.save((err, saveRegister)=>{
         if(err){
-            console.log(err);
+            
             res.status(500).send();
         }
 
