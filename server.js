@@ -7,7 +7,7 @@ let express = require('express');
 let app = express();
 const expressLayouts = require('express-ejs-layouts');
 const indexRouter = require('./routes/index');
-const loginRouter = require('./routes/login');
+
 const registerRouter = require('./routes/Register');
 const parcelRouter = require('./routes/parcel');
 const adminRouter = require('./routes/admins');
@@ -37,7 +37,6 @@ db.once('open', () => console.log('connected to Mongoose'));
 
 app.use(express.static('public'));
 app.use('/', indexRouter);
-app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/parcel', parcelRouter);
 app.use('/admin', adminRouter);

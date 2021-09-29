@@ -9,7 +9,7 @@ const register = require('../models/register');
 
 router.get('/', (req, res) => {
 
-    res.render('Register', {register: new register()});
+    res.render('user/Register', {register: new register()});
 
 });
 
@@ -36,10 +36,39 @@ router.post('/', (req, res) => {
             res.status(500).send();
         }
 
-        res.render('login');
+        res.render('user/login');
     });
 
 });
+
+
+router.get('/login', (req, res) => {
+
+    res.render('user/login',  {register: new register()});
+
+});
+
+router.post('/login', (req, res) => {
+    var password = req.body.password;
+    var email = req.body.email;
+
+    register.findOne({email: email, password: password}, (err, register)=> {
+        if(err){
+            console.log(err);
+            
+        }
+        if(!register){
+            return res.status(404).send();
+        }
+
+        res.redirect('/parcel');
+    });
+
+
+    
+});
+
+
 
 
 

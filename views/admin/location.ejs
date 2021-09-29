@@ -1,4 +1,4 @@
-<form class="back" action="/admin/location" method="GET">
+<form class="back" action="/admin/search" method="GET">
     
     <br>
 
@@ -21,21 +21,21 @@
 
 <% parcels.forEach(parcel => { %>
     <br>
-    <div> username: ${parcel.username}</div>
-    <div>Firstname: ${parcel.Firstname}</div>
+    <div>username: <%= parcel.username%></div>
+    <div>Firstname: <%= parcel.Firstname%></div>
     <div>Description: <%= parcel.Description%></div>
     <div>Destination: <%= parcel.destination%></div>
-    <div>Location: <%= parcel.location%></div>
-    <div>Status: <%= parcel.status%></div>
+    <div>location: <%= parcel.location%></div>
+    <div>status: <%= parcel.status%></div>
     
-    <a href = "/admin/location/<%= parcel.id%>"> Edit location </a> <br>
-    <br>
-    <a href = "/admin/status/<%= parcel.id%>"> Edit Status </a>
+    <a href = "/admin/location/<%= parcel.id %>"> Edit location </a> <br>
+    <a href = "/admin/status/<%= parcel.id %>/"> Edit status </a>
 
-
+    
         
     <br>
 <% }) %>
+
 
 
 

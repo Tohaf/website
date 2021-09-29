@@ -15,11 +15,11 @@ router.get('/', (req, res) => {
 
 });
 
-router.get('/location', async(req, res) => {
+router.get('/search', async(req, res) => {
 
     let searchOptions = {};
 
-    if(req.query.location != null && req.query.location !== '' ){
+    if(req.query.location != null ){    
 
         searchOptions.location = new RegExp(req.query.location, 'i');
     }
