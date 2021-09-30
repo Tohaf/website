@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 });
 
 
-router.post('/', (req, res) => {
+router.post('/', async(req, res) => {
 
     var Firstname = req.body.Firstname;
     var Lastname = req.body.Lastname;
