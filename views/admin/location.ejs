@@ -21,12 +21,13 @@
 
 <% parcels.forEach(parcel => { %>
     <br>
-    <div>username: <%= parcel.username%></div>
+    <div>username: ` ${parcel.username}`</div>
     <div>Firstname: <%= parcel.Firstname%></div>
     <div>Description: <%= parcel.Description%></div>
     <div>Destination: <%= parcel.destination%></div>
     <div>location: <%= parcel.location%></div>
     <div>status: <%= parcel.status%></div>
+    
     
     <a href = "/admin/location/<%= parcel.id %>"> Edit location </a> <br>
     <a href = "/admin/status/<%= parcel.id %>/"> Edit status </a>
